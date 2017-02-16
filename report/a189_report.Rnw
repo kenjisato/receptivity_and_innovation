@@ -1,0 +1,164 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{tikz, tikzscale}
+\usepackage[margin=1in]{geometry}
+\usepackage{subcaption}
+\usepackage{booktabs, dashrule, multirow}
+
+\makeatletter
+\def\xmidrule{%
+\noalign{\vskip\aboverulesep}%
+\multispan{3}{\leaders\hbox to 4pt{\hss\vrule\@height\cmidrulewidth\@width 2pt \relax\hss}\hfill\kern0pt}\cr%
+\noalign{\vskip\belowrulesep}%
+}
+\makeatother
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+<<setup, include=FALSE, echo=FALSE>>=
+wd = getwd(); setwd('..')
+source('R/a189-logpatent1.R')
+source('R/a189-logpatent2.R')
+setwd(wd)
+@
+
+\begin{figure}[!ht]
+  \begin{subfigure}[t]{0.48\columnwidth}%
+    \footnotesize
+    \vspace{0pt}
+    \textbf{[A189]} Now I will briefly describe some people. Using this card, 
+    would you please indicate for each description whether that 
+    person is very much like you, like you, somewhat like you, 
+    not like you, or not at all like you?  ``It is important to this person 
+    to think up new ideas and be creative; to do things one's own way.''
+    \vspace{1em}
+    
+    \centering
+    \begin{tabular}{@{}lll@{}} 
+      \toprule
+      Code & Response & Receptivity \\ 
+      \midrule
+      1  & Very much like me  & High\\ \xmidrule
+      2  & Like me            & \multirow{4}{*}{Moderate} \\
+      3  & Somewhat like me   & \\
+      4  & A little like me   & \\
+      5  & Not like me        & \\ \xmidrule
+      6  & Not at all like me & Low\\ \midrule
+      -5 & Missing or Inappropriate\\ \xmidrule
+      -4 & Not asked in survey & *Removed \\ \xmidrule 
+      -3 & Not applicable & \\
+      -2 & No answer      & \\
+      -1 & Don't know     & \\
+      \bottomrule
+    \end{tabular}
+  \end{subfigure}%
+  \hfill{}
+  \begin{subfigure}[t]{0.45\columnwidth}%
+    \vspace{0pt}
+    \centering
+    \includegraphics[width=\linewidth]{../output/a189_logpatent_High.pdf}%
+    \caption{Log patent v.s. High}
+    \label{fig:patent_high}
+  \end{subfigure}
+  \par\bigskip 
+  \begin{subfigure}[t]{0.45\columnwidth}%
+    \centering
+    \includegraphics[width=\linewidth]{../output/a189_logpatent_Moderate.pdf}%
+    \caption{Log patent v.s. Moderate}
+    \label{fig:patent_moderate}
+  \end{subfigure} 
+  \hfill{}%
+  \begin{subfigure}[t]{0.45\columnwidth}%
+    \centering
+    \includegraphics[width=\linewidth]{../output/a189_logpatent_Low.pdf}%
+    \caption{Log patent v.s. Low}
+    \label{fig:patent_low}
+  \end{subfigure}
+  
+  \caption{The scatter plots of log patent applications per million residents 
+           against measures of receptivity. The patent data are taken from World 
+           Intellectual Policy Organization. We in particular use the latest available
+           statistics after 2013. As measures of receptivity we defined aggregate 
+           measures from answers to Question A189 (see the above table) of the 
+           World Values Survey Longitudinal Data. 
+           We recategorize the answers into three groups (High, Moderate, Low) 
+           and computed the proportion of each group among the total response
+           count within each country. While the proportion of Moderate (b) positively 
+           correlates to the patent filing, those of High (a) and Low (c) negatively 
+           do.\protect\footnotemark}
+\end{figure}
+
+\footnotetext{This tendency is mostly robust. We have made similar analysis 
+with a different innovation measure (Global Innovation Index) and with  
+different receptivity measures (several different definitions of High/Moderate/Low 
+for the same question as well as measures computed from E046 of WVS). 
+We observe qualitatively equivalent results under different specifications 
+except for low receptivity groups. The negative correlations between proportion of 
+Low and different innovation measures are subtle; they may or may not be observed.}
+
+
+\pagebreak
+
+\begin{figure}[!ht]
+  \begin{subfigure}[t]{0.48\columnwidth}%
+    \footnotesize
+    \vspace{0pt}
+    \textbf{[A189]} ``It is important to this person 
+    to think up new ideas and be creative; to do things one's own way.''
+    
+    Different recategorization to High/Moderate/Low.
+    
+    \vspace{1em}
+    
+    \centering
+    \begin{tabular}{@{}lll@{}} 
+      \toprule
+      Code & Response & Receptivity \\ 
+      \midrule
+      1  & Very much like me  & \multirow{2}{*}{High}\\ 
+      2  & Like me            & \\ \xmidrule
+      3  & Somewhat like me   & \multirow{2}{*}{Moderate} \\
+      4  & A little like me   & \\ \xmidrule
+      5  & Not like me        & \multirow{2}{*}{Low}\\ 
+      6  & Not at all like me & \\ \midrule
+      -5 & Missing or Inappropriate\\ \xmidrule
+      -4 & Not asked in survey & *Removed \\ \xmidrule 
+      -3 & Not applicable & \\
+      -2 & No answer      & \\
+      -1 & Don't know     & \\
+      \bottomrule
+    \end{tabular}
+  \end{subfigure}%
+  \hfill{}
+  \begin{subfigure}[t]{0.45\columnwidth}%
+    \vspace{0pt}
+    \centering
+    \includegraphics[width=\linewidth]{../output/a189_logpatent2_High.pdf}%
+    \caption{Log patent v.s. High}
+    \label{fig:patent_high}
+  \end{subfigure}
+  \par\bigskip 
+  \begin{subfigure}[t]{0.45\columnwidth}%
+    \centering
+    \includegraphics[width=\linewidth]{../output/a189_logpatent2_Moderate.pdf}%
+    \caption{Log patent v.s. Moderate}
+    \label{fig:patent_moderate}
+  \end{subfigure} 
+  \hfill{}%
+  \begin{subfigure}[t]{0.45\columnwidth}%
+    \centering
+    \includegraphics[width=\linewidth]{../output/a189_logpatent2_Low.pdf}%
+    \caption{Log patent v.s. Low}
+    \label{fig:patent_low}
+  \end{subfigure}
+  
+  \caption{Scatter plots under different recategorization. The negative 
+           correlation of Low disappears but the strong correlations of 
+           patent count to High and to Moderate are still observed.}
+\end{figure}
+
+
+
+\end{document}
