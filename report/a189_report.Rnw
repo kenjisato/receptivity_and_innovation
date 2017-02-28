@@ -59,41 +59,50 @@ setwd(wd)
     \vspace{0pt}
     \centering
     \includegraphics[width=\linewidth]{../output/a189_logpatent_High.pdf}%
-    \caption{Log patent v.s. High}
+    \caption{Log patent vs. High}
     \label{fig:patent_high}
   \end{subfigure}
   \par\bigskip 
   \begin{subfigure}[t]{0.45\columnwidth}%
     \centering
     \includegraphics[width=\linewidth]{../output/a189_logpatent_Moderate.pdf}%
-    \caption{Log patent v.s. Moderate}
+    \caption{Log patent vs. Moderate}
     \label{fig:patent_moderate}
   \end{subfigure} 
   \hfill{}%
   \begin{subfigure}[t]{0.45\columnwidth}%
     \centering
     \includegraphics[width=\linewidth]{../output/a189_logpatent_Low.pdf}%
-    \caption{Log patent v.s. Low}
+    \caption{Log patent vs. Low}
     \label{fig:patent_low}
   \end{subfigure}
   
   \caption{The scatter plots of log patent applications per million residents 
-           against measures of receptivity. The patent data are taken from World 
+           against measures of receptivity. The patent data are taken from the World 
            Intellectual Policy Organization. We in particular use the latest available
-           statistics after 2013. As measures of receptivity we defined aggregate 
+           statistics, from after 2013. As measures of receptivity we defined aggregate 
            measures from answers to Question A189 (see the above table) of the 
-           World Values Survey Longitudinal Data. 
+           World Values Survey longitudinal data. 
            We recategorize the answers into three groups (High, Moderate, Low) 
-           and computed the proportion of each group among the total response
+           and calculate the proportion of each group among the total response
            count within each country. While the proportion of Moderate (b) positively 
-           correlates to the patent filing, those of High (a) and Low (c) negatively 
-           do.\protect\footnotemark}
+           correlates to patent filings, those of High (a) and Low (c) negatively 
+           do. This tendency is mostly robust.\protect\footnotemark}
 \end{figure}
 
-\footnotetext{This tendency is mostly robust. We have made similar analysis 
-with a different innovation measure (Global Innovation Index) and with  
-different receptivity measures (several different definitions of High/Moderate/Low 
-for the same question as well as measures computed from E046 of WVS). 
+\footnotetext{As shown in Appendix A, we have made similar analysis with different 
+  receptivity measures such as High composed of both ``Very much like me'' and 
+  ``Like me'' and Moderate composed of only ``Somewhat like me'' and ``A little like
+  me.'' We obtain the qualitatively same relationships for measures computed from E046. 
+
+  We also have checked with measures computed from E046. It is, in addition, robust to
+  a different innovation measure such as GII.
+
+  It is also robust to a different innovation measure as GII (Global Innovation Index).
+
+(several different definitions of High/Moderate/Low for the same question as well as 
+measures computed from E046 of WVS)
+and with a different innovation measure (Global Innovation Index). 
 We observe qualitatively equivalent results under different specifications 
 except for low receptivity groups. The negative correlations between proportion of 
 Low and different innovation measures are subtle; they may or may not be observed.}
@@ -136,21 +145,21 @@ Low and different innovation measures are subtle; they may or may not be observe
     \vspace{0pt}
     \centering
     \includegraphics[width=\linewidth]{../output/a189_logpatent2_High.pdf}%
-    \caption{Log patent v.s. High}
+    \caption{Log patent vs. High}
     \label{fig:patent_high}
   \end{subfigure}
   \par\bigskip 
   \begin{subfigure}[t]{0.45\columnwidth}%
     \centering
     \includegraphics[width=\linewidth]{../output/a189_logpatent2_Moderate.pdf}%
-    \caption{Log patent v.s. Moderate}
+    \caption{Log patent vs. Moderate}
     \label{fig:patent_moderate}
   \end{subfigure} 
   \hfill{}%
   \begin{subfigure}[t]{0.45\columnwidth}%
     \centering
     \includegraphics[width=\linewidth]{../output/a189_logpatent2_Low.pdf}%
-    \caption{Log patent v.s. Low}
+    \caption{Log patent vs. Low}
     \label{fig:patent_low}
   \end{subfigure}
   
@@ -159,6 +168,10 @@ Low and different innovation measures are subtle; they may or may not be observe
            patent count to High and to Moderate are still observed.}
 \end{figure}
 
+
+\appendix
+
+a
 
 
 \end{document}
