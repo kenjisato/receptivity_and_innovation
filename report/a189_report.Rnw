@@ -90,7 +90,7 @@ setwd(wd)
            do. This tendency is mostly robust.\protect\footnotemark}
 \end{figure}
 
-\footnotetext{As shown in Appendix A, we have made similar analysis with different 
+\footnotetext{As shown in Appendix C, we have made similar analysis with different 
   receptivity measures such as High composed of both ``Very much like me'' and 
   ``Like me'' and Moderate composed of only ``Somewhat like me'' and ``A little like
   me.'' We obtain the qualitatively same relationships for measures computed from E046. 
