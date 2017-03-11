@@ -6,3 +6,5 @@
 !/output/.gitkeep
 /report/*
 !/report/*.Rnw
+/online_appendix/*
+!/online_appendix/*.Rnw
