@@ -1,4 +1,4 @@
-\documentclass[draft]{article}
+\documentclass[draft, a4paper]{article}
 %\documentclass{article}
 
 \usepackage[utf8]{inputenc}

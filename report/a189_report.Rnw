@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[pdftex]{graphicx}
@@ -90,88 +90,16 @@ setwd(wd)
            do. This tendency is mostly robust.\protect\footnotemark}
 \end{figure}
 
-\footnotetext{As shown in Appendix C, we have made similar analysis with different 
+\footnotetext{As shown in Appendix C (not for publication), we have made similar 
+  analysis with different 
   receptivity measures such as High composed of both ``Very much like me'' and 
   ``Like me'' and Moderate composed of only ``Somewhat like me'' and ``A little like
   me.'' We obtain the qualitatively same relationships for measures computed from E046. 
-
-  We also have checked with measures computed from E046. It is, in addition, robust to
-  a different innovation measure such as GII.
-
-  It is also robust to a different innovation measure as GII (Global Innovation Index).
-
-(several different definitions of High/Moderate/Low for the same question as well as 
-measures computed from E046 of WVS)
-and with a different innovation measure (Global Innovation Index). 
-We observe qualitatively equivalent results under different specifications 
-except for low receptivity groups. The negative correlations between proportion of 
-Low and different innovation measures are subtle; they may or may not be observed.}
-
-
-\pagebreak
-
-\begin{figure}[!ht]
-  \begin{subfigure}[t]{0.48\columnwidth}%
-    \footnotesize
-    \vspace{0pt}
-    \textbf{[A189]} ``It is important to this person 
-    to think up new ideas and be creative; to do things one's own way.''
-    
-    Different recategorization to High/Moderate/Low.
-    
-    \vspace{1em}
-    
-    \centering
-    \begin{tabular}{@{}lll@{}} 
-      \toprule
-      Code & Response & Receptivity \\ 
-      \midrule
-      1  & Very much like me  & \multirow{2}{*}{High}\\ 
-      2  & Like me            & \\ \xmidrule
-      3  & Somewhat like me   & \multirow{2}{*}{Moderate} \\
-      4  & A little like me   & \\ \xmidrule
-      5  & Not like me        & \multirow{2}{*}{Low}\\ 
-      6  & Not at all like me & \\ \midrule
-      -5 & Missing or Inappropriate\\ \xmidrule
-      -4 & Not asked in survey & *Removed \\ \xmidrule 
-      -3 & Not applicable & \\
-      -2 & No answer      & \\
-      -1 & Don't know     & \\
-      \bottomrule
-    \end{tabular}
-  \end{subfigure}%
-  \hfill{}
-  \begin{subfigure}[t]{0.45\columnwidth}%
-    \vspace{0pt}
-    \centering
-    \includegraphics[width=\linewidth]{../output/a189_logpatent2_High.pdf}%
-    \caption{Log patent vs. High}
-    \label{fig:patent_high}
-  \end{subfigure}
-  \par\bigskip 
-  \begin{subfigure}[t]{0.45\columnwidth}%
-    \centering
-    \includegraphics[width=\linewidth]{../output/a189_logpatent2_Moderate.pdf}%
-    \caption{Log patent vs. Moderate}
-    \label{fig:patent_moderate}
-  \end{subfigure} 
-  \hfill{}%
-  \begin{subfigure}[t]{0.45\columnwidth}%
-    \centering
-    \includegraphics[width=\linewidth]{../output/a189_logpatent2_Low.pdf}%
-    \caption{Log patent vs. Low}
-    \label{fig:patent_low}
-  \end{subfigure}
-  
-  \caption{Scatter plots under different recategorization. The negative 
-           correlation of Low disappears but the strong correlations of 
-           patent count to High and to Moderate are still observed.}
-\end{figure}
-
-
-\appendix
-
-a
+  It is, in addition, robust to a different innovation measure such as Global 
+  Innovation Index. We observe qualitatively equivalent results under different 
+  specifications except for low receptivity groups. The negative correlations 
+  between proportion of Low and different innovation measures are subtle; they may 
+  or may not be observed.}
 
 
 \end{document}

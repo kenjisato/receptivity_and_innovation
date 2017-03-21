@@ -62,11 +62,13 @@ save_plot = function(data, xvars, yvar, xtempl, ylabel,
     p  = ggplot(data, aes_string(x = xvar, y = yvar)) + 
       geom_point(size = 3) + geom_smooth(method = "lm") + 
       labs(x = sub(placeholder, xvar, xtempl), y = ylabel) + 
-      theme(text = element_text(family="Times", size=20))
+      #xlim(0, 1) +
+      theme(text = element_text(family="Times", size=20),
+            aspect.ratio = 0.75)
     
     file_name = paste(sub(placeholder, xvar, ftempl), file_type, sep = '.')
     if (file_type == "pdf") {
-      ggsave(file_name, p)
+      ggsave(file_name, p,  width = 8, height = 6)
     } else {
       print(p)
     }
