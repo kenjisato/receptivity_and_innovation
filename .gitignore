@@ -4,9 +4,9 @@
 .Ruserdata
 /output/*
 !/output/.gitkeep
-/report/*
-!/report/*.Rnw
-!/report/*.pdf
+/figure1/*
+!/figure1/*.Rnw
+!/figure1/*.pdf
 /appendix_c/*
 !/appendix_c/*.Rnw
 !/appendix_c/*.pdf
